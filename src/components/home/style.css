@@ -1,0 +1,128 @@
+.home-container {
+    height: calc(100% - 83px);
+    width: 100%;
+    background: #292930;
+    display: flex;
+}
+.home-info {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 80px;
+    animation: home-info 2s linear 1 forwards;
+    opacity: 0;
+}
+
+@keyframes home-info {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.home-info h1 {
+    color: #fff;
+    font-size: 3em;
+}
+
+.home-info p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.home-info a {
+    color: #fff;
+    background: dodgerblue;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.home-info a:hover {
+    background: #007bff;
+    transition: background 0.3s ease;
+}
+
+.home-image {
+    width: 50%;
+    height: 100%;
+    /* background-image: url('image.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-image img {
+    width: 60%;
+    object-fit: cover;
+    opacity: 0;
+    animation: home-image 2.5s linear 1 forwards;
+    transform: translateX(60px);
+}
+
+@keyframes home-image {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .home-info p {
+        font-size: 16px;
+    }
+    .home-info h1 {
+        font-size: 2.5em;
+    }
+    .home-info {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 773px) {
+    .home-info {
+        padding: 30px;
+        width: 100%;
+    }
+    .home-image {
+        display: none;
+    }
+    .home-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home-info p {
+        font-size: 14px;
+    }
+    .home-info h1 {
+        font-size: 2em;
+    }
+    .home-info {
+        padding: 20px;
+    }
+    .home-image {
+        display: none;
+    }
+    .home-container {
+        flex-direction: column;
+    }
+    .home-container {
+        align-items: start;
+    }
+}

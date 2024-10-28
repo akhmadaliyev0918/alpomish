@@ -1,0 +1,101 @@
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    background: #292930;   
+    display: flex;
+    align-items: center;justify-content: space-between;
+}
+.Nav-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.Nav-buttons a {
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    gap: 8px;
+    font-weight: 600;
+}
+.Nav-buttons a:hover {
+    filter: drop-shadow(0 0 1px white);
+    transition: 0.3s;
+}
+.Nav-buttons a svg {
+    transition: 0.5s;
+}
+
+.Nav-buttons a:hover svg {
+    transform: scale(1.3);
+}
+
+/* media */
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 10px 20px;
+        justify-content: space-between;
+        display: flex;
+    }
+    .navbar h1 {
+        display: none;
+    }
+
+    .Nav-buttons {
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        gap: 50px;
+    }
+    .Nav-buttons a {
+        padding: 0 10px;
+        flex-direction: column;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    /* .button-textcontent {
+        display: none;
+    } */
+    .Nav-buttons a svg {
+        width: 18px;
+        height: 18px;
+    }
+    .Nav-buttons a {
+        padding: 0 10px;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 470px) {
+    .Nav-buttons a {
+        padding: 0 5px;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .Nav-buttons a svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 405px) {
+    .Nav-buttons a {
+        padding: 0 3px;
+        flex-direction: column;
+        font-size: 10px;
+    }
+    .Nav-buttons a svg {
+        width: 16px;
+        height: 16px;
+    }
+}
