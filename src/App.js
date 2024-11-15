@@ -1,28 +1,24 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "../src/components/navbar/navbar";
-import Home from './components/home/home';
-import Story from "./components/story/Story";
-import Films from "./components/films/Films"
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from './pages/home/Home';
+import Navbar from "./components/navbar/Navbar";
+import Single from "./components/SinglePage/Single";
+import Cart from "./pages/cart/Cart";
+import Layout from "./pages/layout/Layout";
 
 function App() {
-  const body = {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100vh',
-  };
-  
+  const [searchQuery, setSearchQuery] = useState('');
+
   return (
-    <BrowserRouter>
-      <div style={body}>
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/story" element={<Story />} />
-          <Route exact path="/films" element={<Films />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Navbar setSearchQuery={setSearchQuery} />
+      <Routes>
+        <Route exact path="/" element={<Home searchQuery={searchQuery} />} />
+        <Route path="/product/:Id" element={<Single />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/catalog/:category" element={<Layout />} />
+      </Routes>
+    </div>
   );
 }
 

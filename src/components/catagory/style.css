@@ -1,0 +1,68 @@
+/* 381 415 */
+.Catagory {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catagory-element1 {
+    width: 381px;
+    border-radius: 15px;
+    height: 415px;
+    background: #000;
+    background-image: url(https://www.schoolshop.in/backend/web/uploads/category/1730785598uniform.png);
+    background-position: center;
+}
+
+.catagory-box {
+    width: 381px;
+    height: 415px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catagory-element4 {
+    width: 381px;
+    border-radius: 15px;
+    height: 415px;
+    background: #000;
+    background-image: url(https://www.schoolshop.in/backend/web/uploads/category/17256146981708148974uniform-summer.webp);
+}
+
+.catagory-element2 {
+    width: 381px;
+    border-radius: 15px;
+    height: 200px;
+    background: #000;
+    background-image: url(https://www.schoolshop.in/backend/web/uploads/category/1708155725notebook-banner.png.png);
+}
+
+.catagory-element3 {
+    width: 381px;
+    border-radius: 15px;
+    height: 200px;
+    background: #000;
+    background-image: url(https://www.schoolshop.in/backend/web/uploads/category/17256147151707560211stationery.webp);
+}
+.catalog-text {
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catalog-text h1 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.catalog-text p {
+    font-size: 18px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

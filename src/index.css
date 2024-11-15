@@ -12,3 +12,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  display: flex;
+  flex-direction: column;
+  /* background: #caf0f8; */
+  /* background: linear-gradient(#caf0f8, #53e2ffaf); */
+
+}
+a {
+  text-decoration: none;
+  color: black;
+}

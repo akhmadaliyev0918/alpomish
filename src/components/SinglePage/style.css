@@ -1,0 +1,317 @@
+.single-product-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.single-product-img img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.single-product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 600px;
+    border-right: 0.5px solid rgba(128, 128, 128, 0.384);
+}
+
+.single-product-details h1 {
+    font-size: 34px;
+    color: #292929;
+}
+
+.single-product-details p {
+    font-size: 16px;
+}
+
+.single-price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #292929;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.single-price p {
+    color: #c40000;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    /* Yulduz o'lchamini moslashtirish */
+}
+
+.sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.sizes p {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.size-button {
+    /* padding: 2px 5px; */
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.size-button:hover {
+    background-color: #e0e0e0;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.size-button {
+    background-color: #f0f0f0;
+    /* Tugmachaning fon rangi */
+    border: 1px solid #ccc;
+    /* Chekka rangi */
+    border-radius: 5px;
+    /* Burchaklarni yumshatish */
+    padding: 5px 10px;
+    /* Tugmachaning ichki joyi */
+    margin: 5px;
+    /* Tugmachalar orasidagi masofa */
+    cursor: pointer;
+    /* Ko'rsatgichni o'zgartirish */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Animatsiya effekti */
+    font-size: 16px;
+    /* Matn o'lchami */
+}
+
+.size-button:hover {
+    background-color: #e0e0e0;
+    /* O'ngni bosganda fon rangi */
+}
+
+.size-button:active {
+    background-color: #d0d0d0;
+    /* Bosilganda fon rangi */
+}
+
+.size-button.selected {
+    background-color: #007bff;
+    /* Tanlangan tugmachaning fon rangi */
+    color: #fff;
+    /* Tanlangan tugmachaning matn rangi */
+    border: none;
+    /* Tanlangan tugmachaning chekkasi yo'q */
+}
+
+.no-size {
+    width: 100%;
+    justify-content: start;
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */
+.button {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #333;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+}
+
+.button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #555;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #555;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,
+.button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-wrapper,
+.text,
+.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+.text {
+    top: 0
+}
+
+.text,
+.icon {
+    transition: top 0.5s;
+}
+
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.button:hover {
+    background: #222;
+}
+
+.button:hover .text {
+    top: -100%;
+}
+
+.button:hover .icon {
+    top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 5.5px;
+    overflow: hidden;
+}
+
+.quantity-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    height: 33px;
+    width: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+
+
+
+.quantity-display {
+    margin: 0 10px;
+    font-size: 18px;
+    width: 30px;
+    text-align: center;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.quantity {
+    display: flex;
+    gap: 15px;
+}
+
+.size-button-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+
+
+.product-specification {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+}
+.product-specification h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    align-items: start;
+    padding: 0 0 10px 0;
+    border-bottom: 0.5px solid rgb(145, 145, 145);
+}
+
+.description {
+    font-size: 15px;
+    color: #333;
+    display: flex;
+    align-items: start;
+    width: 100%;
+    justify-content: space-between;
+}
+

@@ -1,0 +1,135 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 700px;
+    padding: 10px 0;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 15px;
+}
+
+.cart-page {
+    padding: 0 50px;
+}
+
+.cart-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-total {
+    width: 400px;
+    border-left: 1px solid #000;
+    height: 100%;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 70%;
+    gap: 5px;
+}
+
+.cart-item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#btn-del {
+    color: #000000;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 28px;
+    transition: 0.3s;
+    position: absolute;
+    right: 10px;
+    top: 30%;
+}
+
+#btn-del:hover {
+    color: #ff0000;
+    animation: deleteicon 0.3s linear 1 forwards;
+}
+
+@keyframes deleteicon {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.empty-cart {
+    height: 500px;
+    width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-cart h1 {
+    font-size: 80px;
+    color: #3333331f;
+}
+
+.empty-name {
+    color: #3333331f;
+    font-size: 140px;
+}
+
+.cart-header {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.cart-item-quantity {
+    background: #000;
+    display: flex;
+    color: #fff;
+    position: relative;
+}
+
+.cart-item-quantity button {
+    color: #fff;
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+}
