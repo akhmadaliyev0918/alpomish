@@ -11,6 +11,7 @@ import Register from "../register/Register";
 
 const Navbar = ({ setSearchQuery }) => {
     const { cart, openModal } = useCart();
+    const token = localStorage.getItem("authToken");
 
     const handleSearch = (e) => {
         setSearchQuery(e.target.value);
@@ -23,7 +24,7 @@ const Navbar = ({ setSearchQuery }) => {
     return (
 
         <div className="navbar-container">
-            <Register/>
+            <Register />
             <div className="navbar-top">
                 <div className="nav-logo">EDUshop</div>
                 <div className="link-search">
@@ -42,7 +43,15 @@ const Navbar = ({ setSearchQuery }) => {
                         </button>
                     </Link>
                     <button><MdFavoriteBorder /></button>
-                    <button onClick={openModal}><AiOutlineUser /></button>
+                    {token ?
+                        <Link to="/profile">
+                            <button>
+                                <AiOutlineUser />
+                            </button>
+                        </Link>
+                        :
+                        <button onClick={openModal}><AiOutlineUser /></button>
+                    }
                 </div>
             </div>
             <div className="navbar-bottom">
